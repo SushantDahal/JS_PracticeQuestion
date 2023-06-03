@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunked Array</title>
+</head>
+<body>
+    <h1>Chunked Array</h1>
+    <script>
+
+function chunk(array,size){
+    const chunked = []
+    let index = 0
+
+    while(index < array.length){
+        chunked.push(array.slice(index,index+size))
+        index += size
+    }
+    return chunked
+}
+console.log(chunk([1,2,3,4,5,56,5,5,5,5,7],2))
+// document.write(chunk([1,2,3,4,5,56,5,5,5,5,7],2))
+
+    </script>
+    
+</body>
+</html>
